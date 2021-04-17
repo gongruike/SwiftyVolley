@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Nimble (8.0.9)
+  - Quick (2.2.1)
+  - SwiftyVolley (0.1.0):
+    - Alamofire (~> 5.0)
+
+DEPENDENCIES:
+  - Nimble (~> 8.0.7)
+  - Quick (~> 2.2.0)
+  - SwiftyVolley (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  SwiftyVolley:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+  SwiftyVolley: 52588e6edd3611cd897ac4e3329c72492cb84483
+
+PODFILE CHECKSUM: 66bb13d1fa7fdd4551500af5e589fe8eac6af53e
+
+COCOAPODS: 1.10.1
