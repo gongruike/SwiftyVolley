@@ -7,7 +7,7 @@
 
 import Alamofire
 
-open class Request<DataType ,ValueType>: RequestType {
+open class Request<DataType, ValueType>: RequestType {
         
     public typealias CompletionHandler = (Result<ValueType, Swift.Error>) -> Void
 
@@ -45,7 +45,7 @@ open class Request<DataType ,ValueType>: RequestType {
         afRequest?.cancel()
     }
     
-    open func deliver(_ dataResponse: AFDataResponse<ValueType>) {
+    open func deliver(_ dataResponse: AFDataResponse<DataType>) {
         
     }
 }
