@@ -8,10 +8,27 @@
 
 import UIKit
 import SwiftyVolley
+import Alamofire
+
+extension Endpoint {
+    static func home() -> Endpoint<Dictionary<String, String>> {
+        .init(path: "telematics/v3/weather",
+              method: .get,
+              headers: [:],
+              parameters: [
+                "location":"嘉兴",
+                "output":"json",
+                "ak": "5slgyqGDENN7Sy7pw29IUvrZ"
+              ]
+        )
+    }
+}
 
 class ViewController: UIViewController {
 
-    let requestQueue = RequestQueue()
+    lazy var apiClient: APIClient = {
+       return APIClient(requestEncoder: DefaultRequestEncoder(baseURL: URL(string: "http://api.map.baidu.com/")!))
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +42,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func topBtnDidClicked(_ sender: Any) {
-//        let stringRequest = StringRequest<Any>(baseURL: URL(string: "https://www.baidu.com")!, path: "")
-//        requestQueue.add(stringRequest)
+        ///
+        apiClient.request(endpoint: .home()) { (result) in
+            ///
+            print(result)
+        }
     }
     
 }
