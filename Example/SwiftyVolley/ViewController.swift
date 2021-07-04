@@ -127,11 +127,7 @@ struct Samele: Decodable {
 
 extension Endpoint {
     static func sample() -> Endpoint<Samele> {
-        .init(path: "one.json",
-              method: .get,
-              headers: [:],
-              parameters: [:]
-        )
+        .init(path: "one.json")
     }
 }
 

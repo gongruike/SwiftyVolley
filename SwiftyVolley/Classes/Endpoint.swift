@@ -13,17 +13,17 @@ public struct Endpoint<ResponseType: Decodable> {
 
     public let method: HTTPMethod
     
-    public let headers: HTTPHeaders
+    public let headers: HTTPHeaders?
 
-    public let parameters: Parameters
-        
-    public var timeoutInterval: TimeInterval
-    
+    public let parameters: Encodable?
+
+    public let timeoutInterval: TimeInterval
+
     public init(path: String,
-         method: HTTPMethod,
-         headers: HTTPHeaders,
-         parameters: Parameters,
-         timeoutInterval: TimeInterval = 10
+                method: HTTPMethod = .get,
+                headers: HTTPHeaders? = nil,
+                parameters: Encodable? = nil,
+                timeoutInterval: TimeInterval = 10
     ) {
         self.path = path
         self.method = method
@@ -32,4 +32,17 @@ public struct Endpoint<ResponseType: Decodable> {
         self.timeoutInterval = timeoutInterval
     }
     
+}
+
+public struct AnyEncodable: Encodable {
+    
+    public let encodable: Encodable
+    
+    public init(_ encodable: Encodable) {
+        self.encodable = encodable
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        try encodable.encode(to: encoder)
+    }
 }

@@ -32,25 +32,24 @@ open class APIClient {
                 return
             }
             
-//            self?.session.request(req).responseDecodable(of: Response.self) { rsp in
-//                switch rsp.result {
-//                case let .success(value):
-//                    completion(.success(value))
-//                case let .failure(error):
-//                    completion(.failure(error))
-//                }
-//            }
-            
-            self?.session.request(req).responseData(completionHandler: { (rsp) in
-                do {
-                    let data = try rsp.result.get()
-                    let value = try JSONDecoder().decode(Response.self, from: data)
+            self?.session.request(req).responseDecodable(of: Response.self) { rsp in
+                switch rsp.result {
+                case let .success(value):
                     completion(.success(value))
-                } catch {
+                case let .failure(error):
                     completion(.failure(error))
                 }
-                
-            })
+            }
+            
+//            self?.session.request(req).responseData(completionHandler: { (rsp) in
+//                do {
+//                    let data = try rsp.result.get()
+//                    let value = try JSONDecoder().decode(Response.self, from: data)
+//                    completion(.success(value))
+//                } catch {
+//                    completion(.failure(error))
+//                }
+//            })
         }
     }
     

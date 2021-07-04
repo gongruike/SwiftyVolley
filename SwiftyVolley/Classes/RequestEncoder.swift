@@ -36,8 +36,11 @@ open class DefaultRequestEncoder: RequestEncoder {
         var request: URLRequest
         do {
             request = try URLRequest(url: url, method: endpoint.method, headers: endpoint.headers)
-            request = try URLEncoding.default.encode(request, with: endpoint.parameters)
             request.timeoutInterval = endpoint.timeoutInterval
+
+            if let parameters = endpoint.parameters {
+                request = try URLEncodedFormParameterEncoder.default.encode(AnyEncodable(parameters), into: request)
+            }
             
             completion(.success(request))
         } catch {
