@@ -46,3 +46,5 @@ public struct AnyEncodable: Encodable {
         try encodable.encode(to: encoder)
     }
 }
+
+public struct EmptyResponse: Decodable {}

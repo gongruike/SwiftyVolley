@@ -40,16 +40,6 @@ open class APIClient {
                     completion(.failure(error))
                 }
             }
-            
-//            self?.session.request(req).responseData(completionHandler: { (rsp) in
-//                do {
-//                    let data = try rsp.result.get()
-//                    let value = try JSONDecoder().decode(Response.self, from: data)
-//                    completion(.success(value))
-//                } catch {
-//                    completion(.failure(error))
-//                }
-//            })
         }
     }
     
