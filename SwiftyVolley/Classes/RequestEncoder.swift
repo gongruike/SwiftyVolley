@@ -33,9 +33,8 @@ open class DefaultRequestEncoder: RequestEncoder {
                 
         let url = baseURL.appendingPathComponent(endpoint.path)
 
-        var request: URLRequest
         do {
-            request = try URLRequest(url: url, method: endpoint.method, headers: endpoint.headers)
+            var request: URLRequest = try URLRequest(url: url, method: endpoint.method, headers: endpoint.headers)
             request.timeoutInterval = endpoint.timeoutInterval
 
             if let parameters = endpoint.parameters {
