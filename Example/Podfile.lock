@@ -1,15 +1,13 @@
 PODS:
   - Alamofire (5.4.1)
-  - Nimble (8.0.9)
-  - Quick (2.2.1)
-  - SwiftyJSON (5.0.1)
+  - Nimble (9.2.0)
+  - Quick (4.0.0)
   - SwiftyVolley (0.1.0):
     - Alamofire (~> 5.0)
-    - SwiftyJSON (~> 5.0)
 
 DEPENDENCIES:
-  - Nimble (~> 8.0.7)
-  - Quick (~> 2.2.0)
+  - Nimble (~> 9.2.0)
+  - Quick (~> 4.0.0)
   - SwiftyVolley (from `../`)
 
 SPEC REPOS:
@@ -17,7 +15,6 @@ SPEC REPOS:
     - Alamofire
     - Nimble
     - Quick
-    - SwiftyJSON
 
 EXTERNAL SOURCES:
   SwiftyVolley:
@@ -25,11 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
-  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
-  SwiftyVolley: 51c8b1c020fce7a5eb62cf7a464d93e89456314a
+  Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  SwiftyVolley: d67d5e6e4cc5516e3d23bc6f23b689ca19d25b80
 
-PODFILE CHECKSUM: 66bb13d1fa7fdd4551500af5e589fe8eac6af53e
+PODFILE CHECKSUM: a19813ff713b061d3dd5f8fd38ec53f3f5b4b0a5
 
 COCOAPODS: 1.10.1

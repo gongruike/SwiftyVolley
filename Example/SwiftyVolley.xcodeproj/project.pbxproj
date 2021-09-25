@@ -195,7 +195,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				CB6DCFBE8D6D84E5F4E5792F /* [CP] Embed Pods Frameworks */,
+				AD4868B83479153D93FF825B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,13 +321,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftyVolley_Example/Pods-SwiftyVolley_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVolley/SwiftyVolley.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVolley.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +333,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyVolley_Example/Pods-SwiftyVolley_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CB6DCFBE8D6D84E5F4E5792F /* [CP] Embed Pods Frameworks */ = {
+		AD4868B83479153D93FF825B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
